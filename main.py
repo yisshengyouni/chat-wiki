@@ -43,9 +43,11 @@ def chatbot(input_text):
     return response.response
 
 
-iface = gr.Interface(fn=chatbot,
-                     inputs=gr.inputs.Textbox(lines=7, label="输入您的文本"),
-                     outputs="text",
-                     title="知识库聊天机器人")
-# index = construct_index("docs")
-iface.launch(share=True, server_port=80)
+
+if __name__ == "__main__":
+    iface = gr.Interface(fn=chatbot,
+                        inputs=gr.inputs.Textbox(lines=7, label="输入您的文本"),
+                        outputs="text",
+                        title="知识库聊天机器人")
+    # index = construct_index("docs")
+    iface.launch(share=True, server_port=8080)
