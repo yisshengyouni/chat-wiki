@@ -48,4 +48,4 @@ iface = gr.Interface(fn=chatbot,
                      outputs="text",
                      title="知识库聊天机器人")
 # index = construct_index("docs")
-iface.launch(share=True)
+iface.launch(share=True, server_port=8080)
